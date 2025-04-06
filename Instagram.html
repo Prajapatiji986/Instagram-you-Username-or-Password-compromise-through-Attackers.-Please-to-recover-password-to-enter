@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram - Fake Demo (For Education Only)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 12px;
+      width: 80%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #0095f6;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      width: 85%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Instagram</h2>
+  <form onsubmit="showPassword(event)">
+    <input type="text" id="username" placeholder="Username, email address or mobile number" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button type="submit">Log in</button>
+  </form>
+
+  <script>
+    function showPassword(event) {
+      event.preventDefault(); // prevent actual submission
+      const password = document.getElementById('password').value;
+      alert("You entered password: " + password); // only shows input, no saving
+    }
+  </script>
+
+</body>
+</html>
